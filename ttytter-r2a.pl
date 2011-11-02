@@ -10,6 +10,8 @@
 #
 ###################
 
+$TTYtter_R2A_VERSION='1.0';
+
 $addaction = sub {
     my @command = split(/ /,$_,3);
 
