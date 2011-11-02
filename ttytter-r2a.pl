@@ -1,6 +1,6 @@
 ###################
 #
-# ttytter-rta.pl -- a TTYtter extension
+# ttytter-r2a.pl -- a TTYtter extension
 # 
 # 	Copyright (C) 2011 by Ben Cotton
 #

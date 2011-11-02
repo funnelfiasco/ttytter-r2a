@@ -1,12 +1,12 @@
-ttytter-rta.pl -- a TTYtter extension
+ttytter-r2a.pl -- a TTYtter extension
 
 	Copyright (C) 2011 by Ben Cotton
 	Licensed under GNU Public License v2.0. See LICENSE.txt for 
 		full license.
 
-	Project website: https://github.com/funnelfiasco/ttytter-rta
+	Project website: https://github.com/funnelfiasco/ttytter-r2a
 
-ttytter-rta.pl is an extension that adds "reply-to-all" functionality to 
+ttytter-r2a.pl is an extension that adds "reply-to-all" functionality to 
 TTYtter. The usage is identical to the built-in '/reply' command. To reply to
 all users mentioned in a tweet, the syntax is:
   /replytoall <tweet_id> <reply_status>
@@ -14,7 +14,7 @@ all users mentioned in a tweet, the syntax is:
 For example:
   /replytoall f2 oh yeah? Well check out this cool @TTYtter extension I wrote!
 
-The lazy typist can also use /replyall or /rta. Commands are case-insensitive
+The lazy typist can also use /replyall or /ra. Commands are case-insensitive
 for the benefit of users running a DRUNKHULK-type account or who really like to
 yell at others on the Internet.
 
