@@ -39,11 +39,16 @@ $addaction = sub {
 		my $mentioned;
 		# We iterate over the string because I can't think of a better way
 		while ( $reply_tweet =~ m/(@\w+)/g ) {
+			# Save the lowercased name in a variable to avoid multiple lc 
+			# invokations and to make the m// below cleaner.
+			my $reply_target = lc($1);
 			# Don't add yourself to the reply list, or the person you're
 			# replying to, since they'll be added anyway
-			unless ( ( lc($1) eq lc("\@$whoami") ) || 
-					 ( lc($1) eq lc("\@$screen_name") ) ) {
-				$mentioned .= "$1 ";
+			# Also try to filter out duplicate references to the same user
+			unless ( ( $reply_target eq lc("\@$whoami") ) || 
+					 ( $reply_target eq lc("\@$screen_name") ) ||
+					 ( $mentioned =~ m/$reply_target/ ) ) {
+				$mentioned .= "$reply_target ";
 			}
 		}
 
