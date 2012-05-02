@@ -25,6 +25,12 @@ $addaction = sub {
 		my $tweet = &get_tweet($tweet_id);
         my $witty_reply = $command[2];
 
+        # Is the witty reply empty? Don't tweet it, that's obnoxious.
+        if ( $witty_reply eq '' ) {
+			print $stdout "-- There is no message here. Are you drunk?\n";
+			return 1;
+		}
+
 		# Check that the tweet exists. If not, it will be hard to reply to it.
 		if (!$tweet->{'id_str'}) {
             print $stdout "-- You have to wait for that tweet to exist!\n";
