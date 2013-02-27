@@ -18,6 +18,10 @@ The lazy typist can also use /replyall or /ra. Commands are case-insensitive
 for the benefit of users running a DRUNKHULK-type account or who really like to
 yell at others on the Internet.
 
+By default, this extension will format the reply in the format '@screen_name
+@mentioned witty_reply'. However, if you want the reply sandwiched, like
+'@screen_name witty_reply @mentioned', you can use /rasw.
+
 The list of matched user names does not include the sender of the tweet being
 replyed to, nor does it include the user name that TTYtter is running under.
 User matching is done by a simple regular expression ("@\w+"), so it's possible

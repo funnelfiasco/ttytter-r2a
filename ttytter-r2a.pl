@@ -18,7 +18,18 @@ $addaction = sub {
 	# Check to see what command was given
     if ( ( lc($command[0]) eq '/replyall' ) || 
 			( lc($command[0]) eq '/ra' )  ||
-			( lc($command[0]) eq '/replytoall' ) ) {
+			( lc($command[0]) eq '/replytoall' ) ||
+			( lc($command[0]) eq '/rasw' ) ) {
+
+		# Determine the sandwich mode. 
+		my $sandwich;
+		if ( lc($command[0]) eq '/rasw' ) {
+			# '@screen_name witty_reply @mentioned'
+			$sandwich = 1;
+		} else {
+			# '@screen_name @mentioned witty_reply'
+			$sandwich = 0;
+		}
 
 		# Get information about the tweet
 		my $tweet_id = $command[1];
@@ -61,8 +72,13 @@ $addaction = sub {
 		# We're replying, so we'd better act like it
 		$in_reply_to = $tweet->{'id_str'};
 
-		# Prepend the tweet with the names to mention
-		$witty_reply = "\@$screen_name $mentioned $witty_reply";
+		# Prepend/append the tweet with the names to mention
+		if ( $sandwich ) {
+			$witty_reply = "\@$screen_name $witty_reply $mentioned";
+		} else {
+			$witty_reply = "\@$screen_name $mentioned $witty_reply";
+		}
+
 		&common_split_post($witty_reply, $in_reply_to, undef);
 		# All done!
 		return 1;
