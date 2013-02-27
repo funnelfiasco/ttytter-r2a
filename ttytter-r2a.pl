@@ -2,7 +2,7 @@
 #
 # ttytter-r2a.pl -- a TTYtter extension
 # 
-# 	Copyright (C) 2011 by Ben Cotton
+# 	Copyright (C) 2013 by Ben Cotton and others
 #
 # 	See README.txt for more information
 #
@@ -10,7 +10,7 @@
 #
 ###################
 
-$TTYtter_R2A_VERSION='1.0.1';
+$TTYtter_R2A_VERSION='1.1';
 
 $addaction = sub {
     my @command = split(/ /,$_,3);
