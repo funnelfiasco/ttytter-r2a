@@ -1,10 +1,14 @@
 ttytter-r2a.pl -- a TTYtter extension
 
-	Copyright (C) 2011 by Ben Cotton
+	Copyright (C) 2013 by Ben Cotton and others
 	Licensed under GNU Public License v2.0. See LICENSE.txt for 
 		full license.
 
 	Project website: https://github.com/funnelfiasco/ttytter-r2a
+
+Note: as of TTYtter version 2.2, the reply-to-all functionality has been added
+mainline TTYtter. The "sandwiched" mode added by Thameera Senanayaka for
+ttytter-r2a.pl version 1.1 is not currently in the mainline TTYtter.
 
 ttytter-r2a.pl is an extension that adds "reply-to-all" functionality to 
 TTYtter. The usage is identical to the built-in '/reply' command. To reply to
